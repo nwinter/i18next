@@ -563,9 +563,10 @@
             if (typeof lng === 'string' && lng.indexOf('-') > -1) {
                 var parts = lng.split('-');
     
-                lng = o.lowerCaseLng ?
-                    parts[0].toLowerCase() +  '-' + parts[1].toLowerCase() :
-                    parts[0].toLowerCase() +  '-' + parts[1].toUpperCase();
+                lng = parts[0].toLowerCase();
+                for (var partIndex = 1; partIndex < parts.length; ++partIndex) {
+                  lng = lng + '-' + parts[i][o.lowerCaseLng ? 'toLowerCase' : 'toUpperCase']();
+                }
     
                 if (o.load !== 'unspecific') languages.push(lng);
                 if (o.load !== 'current') languages.push(parts[0]);
