@@ -565,7 +565,7 @@
     
                 lng = parts[0].toLowerCase();
                 for (var partIndex = 1; partIndex < parts.length; ++partIndex) {
-                  lng = lng + '-' + parts[i][o.lowerCaseLng ? 'toLowerCase' : 'toUpperCase']();
+                  lng = lng + '-' + parts[partIndex][o.lowerCaseLng ? 'toLowerCase' : 'toUpperCase']();
                 }
     
                 if (o.load !== 'unspecific') languages.push(lng);
