@@ -45,7 +45,7 @@ class LanguageUtil {
         p[0] = p[0].toLowerCase();
         p[1] = p[1].toUpperCase();
 
-        if (specialCases.indexOf(p[1].toLowerCase()) > -1) p[1] = capitalize(p[1].toLowerCase());
+        //if (specialCases.indexOf(p[1].toLowerCase()) > -1) p[1] = capitalize(p[1].toLowerCase());  // Hack: maintain our old zh-HANS casing
       } else if (p.length === 3) {
         p[0] = p[0].toLowerCase();
 
@@ -53,8 +53,8 @@ class LanguageUtil {
         if (p[1].length === 2) p[1] = p[1].toUpperCase();
         if (p[0] !== 'sgn' && p[2].length === 2) p[2] = p[2].toUpperCase();
 
-        if (specialCases.indexOf(p[1].toLowerCase()) > -1) p[1] = capitalize(p[1].toLowerCase());
-        if (specialCases.indexOf(p[2].toLowerCase()) > -1) p[2] = capitalize(p[2].toLowerCase());
+        //if (specialCases.indexOf(p[1].toLowerCase()) > -1) p[1] = capitalize(p[1].toLowerCase());  // Hack: maintain our old zh-HANS casing
+        //if (specialCases.indexOf(p[2].toLowerCase()) > -1) p[2] = capitalize(p[2].toLowerCase());  // Hack: maintain our old zh-WUU-HANS casing
       }
 
       return p.join('-');
